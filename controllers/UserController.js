@@ -1,8 +1,8 @@
 import dotenv from "dotenv"
 dotenv.config();
 import User from "../models/User/User.js";
-import firebaseauth from "../services/firebaseAuth.js";
 import jwt from "jsonwebtoken"
+import { firebaseauth } from "../index.js";
 
 export const userRegister = async (req, res) => {
     const { userEmail, firebaseUID } = req.body;
